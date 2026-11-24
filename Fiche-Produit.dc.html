@@ -233,6 +233,89 @@ footer .meg-fl{font-size:14px;line-height:1.3}
 button,a[href]{-webkit-tap-highlight-color:transparent}
 input,select,textarea{font-size:16px!important}
 }
+/* m-mobile2 */
+.m-burger{display:none}
+@media (max-width:768px){
+html{overflow-x:hidden}
+html,body{max-width:100%}
+body{padding-bottom:0!important;overflow-x:clip;touch-action:pan-y pinch-zoom}
+/* header: burger left */
+.m-hdr header{grid-template-columns:44px 1fr auto!important;min-height:52px!important;gap:4px!important;padding-left:6px!important;padding-right:8px!important}
+.m-burger{display:flex!important;align-items:center;justify-content:center;width:44px;height:44px;background:none;border:0;color:#fff;cursor:pointer;padding:0}
+.m-hdr header>a{justify-self:start!important;font-size:21px!important}
+.m-hdr header>div>button,.m-hdr header>div>a{width:40px!important;height:44px!important}
+.m-hdr header>div>button:first-child{display:none!important}
+.m-hdr header>div{gap:0!important}
+.m-promo .meg-wrap{padding-top:5px!important;padding-bottom:5px!important}
+/* no bottom bar, no breadcrumbs */
+.m-tabs{display:none!important}
+.m-bc{display:none!important}
+.m-selwrap{bottom:0!important}
+.m-buy{bottom:0!important;padding-bottom:calc(10px + env(safe-area-inset-bottom))!important}
+/* menu sheet */
+.m-menu{padding-bottom:calc(24px + env(safe-area-inset-bottom))!important}
+.m-menu-h{height:52px;padding:0 12px 0 4px;gap:4px}
+.m-menu-t{font-size:17px;flex:1}
+.m-menu-h .m-lang{display:flex;gap:2px;padding:0;margin:0;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em}
+.m-menu-h .m-lang button{min-width:40px;height:36px;border:1px solid #2A2F36!important;border-radius:2px;padding:0 8px!important;text-decoration:none!important;opacity:1!important;font-weight:500!important;color:#8A919B!important}
+.m-menu-h .m-lang button[style*="font-weight: 700"]{background:#fff!important;color:#0E1116!important;border-color:#fff!important}
+.m-sec{padding:16px 16px 8px}
+.m-brands{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:0 16px}
+.m-brand{display:flex;align-items:center;justify-content:center;height:58px;background:#161A20;border:1px solid #20252C;border-radius:2px}
+.m-brand img{width:128px;height:28px;object-fit:contain;display:block;max-width:80%}
+.m-types{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important;padding:0 16px!important}
+.m-type{font-size:11.5px!important;gap:5px!important}
+.m-type img{aspect-ratio:1/1!important}
+.m-links{padding-top:12px}
+.m-row{min-height:48px!important;font-size:16px!important}
+/* compact type & spacing */
+section[style*="padding: 56px 0"]{padding-top:24px!important;padding-bottom:28px!important}
+section[style*="padding: 80px 0"]{padding-top:36px!important;padding-bottom:40px!important}
+section[style*="padding: 72px 0"]{padding-top:32px!important;padding-bottom:36px!important}
+[style*="min-height: 440px"]{min-height:200px!important}
+[style*="padding-top: 64px; padding-bottom: 64px"]{padding-top:26px!important;padding-bottom:26px!important}
+[style*="grid-template-columns: repeat(4, 1fr)"],[style*="grid-template-columns: repeat(3, 1fr)"]{gap:20px 10px!important}
+/* filters */
+.m-chips{flex-wrap:nowrap!important;overflow-x:auto;margin:0 -16px!important;padding:0 16px 2px;gap:6px!important;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.m-chips::-webkit-scrollbar{display:none}
+.kp-chip{flex:0 0 auto!important;height:30px!important;min-height:0!important;padding:0 12px!important;font-size:11.5px!important;line-height:1!important;white-space:nowrap}
+div:has(>.m-chips){margin-bottom:14px!important;gap:0!important}
+/* Kaporal ambiance tile */
+span[style*="font-size: 34px"][style*="line-height: 0.95"]{font-size:clamp(14px,4.4vw,18px)!important;left:12px!important;right:10px!important;bottom:12px!important;overflow-wrap:anywhere}
+/* product sheet */
+.m-fp-img{aspect-ratio:4/5!important;margin-left:-16px;margin-right:-16px;border-left:0!important;border-right:0!important}
+.fp-th{flex:0 0 48px!important;width:48px!important;height:48px!important}
+button.kp-sw{width:22px!important;height:22px!important;min-width:0!important}
+[style*="gap: 10px"]:has(>button.kp-sw){gap:12px!important}
+div[style*="padding-top: 10px"][style*="border-top: 1px solid #ECEDEF"]{display:grid!important;grid-template-columns:repeat(auto-fill,minmax(58px,1fr));gap:6px!important;border-top:1px solid #ECEDEF}
+div[style*="padding-top: 10px"][style*="border-top: 1px solid #ECEDEF"]>span{display:flex!important;flex-direction:column;align-items:center;gap:3px;border:1px solid #E3E5E8;border-radius:2px;padding:6px 2px;font-size:11px!important;color:#6B727C}
+div[style*="padding-top: 10px"][style*="border-top: 1px solid #ECEDEF"]>span b{font-size:17px!important;line-height:1}
+h1[style*="font-size: 34px"]{font-size:26px!important}
+/* compte pro */
+section[aria-labelledby="cp-h"]{padding-top:22px!important;padding-bottom:22px!important}
+section[aria-labelledby="cp-h"] .meg-wrap{gap:14px!important}
+section[aria-labelledby="cp-h"] h1{font-size:27px!important;line-height:1!important}
+section[aria-labelledby="cp-h"] p{font-size:14px!important;line-height:1.5!important}
+section[aria-labelledby="cp-h"] .meg-wrap>div>span{font-size:10px!important}
+section[aria-labelledby="cp-h"] ol{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:0!important}
+section[aria-labelledby="cp-h"] ol li{padding:10px 6px 0 0!important;gap:3px!important}
+section[aria-labelledby="cp-h"] ol li b{font-size:12.5px!important;line-height:1.2}
+section[aria-labelledby="cp-h"] ol li>span:last-child{display:none!important}
+form [style*="grid-template-columns: repeat(2, minmax(0, 1fr))"]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px 10px!important;padding:14px!important}
+form [style*="grid-column: span 2"]{grid-column:1/-1!important}
+form [style*="grid-column: span 1"]{grid-column:auto!important}
+form input,form select{min-height:44px!important;padding:0 10px!important}
+form label>span:first-child{font-size:10px!important}
+form section>div:first-child{padding:14px 14px 12px!important}
+form h2{font-size:17px!important}
+form section>div:first-child>span{font-size:12px!important}
+form section>div[style*="padding: 18px 28px 22px"]{padding:12px 14px 14px!important}
+form{gap:14px!important}
+form button[style*="min-height: 56px"]{width:100%;min-height:50px!important;padding:0 16px!important}
+form [role="status"]{padding:16px!important;gap:12px!important}
+aside[style*="position: sticky"]{position:static!important;gap:10px!important}
+aside[style*="position: sticky"]>div{padding:14px!important}
+}
 </style>
 </helmet>
 <div class="m-page-buy" style="font-family: Inter, sans-serif; color: #0E1116; background: #FFFFFF; min-height: 100vh">
@@ -247,7 +330,7 @@ input,select,textarea{font-size:16px!important}
 
   <div class="m-hdr" onMouseLeave="{{closeMenu}}" style="position: sticky; top: 0; z-index: 50; background: #0E1116; color: #FFFFFF; border-bottom: 1px solid #2A2F36">
     <header class="meg-wrap" style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; min-height: 76px">
-      <span></span>
+      <button type="button" class="m-burger" onClick="{{mOpen}}" aria-label="{{tx.mbMenu}}" aria-expanded="{{mMenu}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
       <a href="Main.dc.html" style="justify-self: center; text-decoration: none; font-family: 'Inter Tight', sans-serif; font-weight: 900; font-size: 34px; letter-spacing: -0.05em; line-height: 1; text-transform: uppercase; color: {{accent}}; white-space: nowrap">{{tx.k4}}</a>
       <div style="justify-self: end; display: flex; align-items: center; gap: 0">
         <button type="button" aria-label="{{tx.k64}}" style="width: 44px; height: 44px; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #FFFFFF">
@@ -341,7 +424,7 @@ input,select,textarea{font-size:16px!important}
     </sc-if>
   </div>
 
-  <div class="meg-wrap" style="padding-top: 14px; padding-bottom: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #8A9099; display: flex; gap: 8px; align-items: center; flex-wrap: wrap">
+  <div class="m-bc meg-wrap" style="padding-top: 14px; padding-bottom: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #8A9099; display: flex; gap: 8px; align-items: center; flex-wrap: wrap">
     <a class="meg-link" href="Main.dc.html" style="color: #8A9099; text-decoration: none">{{tx.k15}}</a><span>/</span><a class="meg-link" href="#" style="color: #8A9099; text-decoration: none">{{tx.k16}}</a><span>/</span><a class="meg-link" href="Marque-Kaporal.dc.html" style="color: #8A9099; text-decoration: none">{{tx.k17}}</a><span>/</span><span style="color: #545B66">{{name}} · {{colName}}</span>
   </div>
 
@@ -349,7 +432,7 @@ input,select,textarea{font-size:16px!important}
     <div class="meg-wrap" style="display: grid; grid-template-columns: minmax(0, 1fr) 440px; gap: 64px; align-items: start">
 
       <div style="display: flex; flex-direction: column; gap: 12px; min-width: 0">
-        <div style="position: relative; aspect-ratio: 1 / 1; background: #FFFFFF; border: 1px solid #ECEDEF; overflow: hidden">
+        <div class="m-fp-img" style="position: relative; aspect-ratio: 1 / 1; background: #FFFFFF; border: 1px solid #ECEDEF; overflow: hidden">
           <img src="{{mainImg}}" alt="Kaporal {{name}} {{colName}} · {{viewLabel}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block">
         </div>
         <div style="display: flex; gap: 8px; justify-content: center">
@@ -487,30 +570,29 @@ input,select,textarea{font-size:16px!important}
       </div>
     </div>
   </footer>
-
-  <nav class="m-tabs" aria-label="{{tx.mbNav}}">
-    <a class="m-tab" href="Main.dc.html" aria-current="{{tx.mbCurH}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h5v-6h4v6h5V10"></path></svg><span>{{tx.mbH}}</span></a>
-    <button type="button" class="m-tab" onClick="{{mOpen}}" aria-current="{{tx.mbCurC}}" aria-expanded="{{mMenu}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg><span>{{tx.mbC}}</span></button>
-    <button type="button" class="m-tab" onClick="{{selOpen}}" aria-current="{{tx.mbCurS}}" aria-expanded="{{selExpanded}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg><span style="{{mBadge}}">{{selCount}}</span><span>{{tx.mbS}}</span></button>
-    <a class="m-tab" href="Compte-Pro.dc.html" aria-current="{{tx.mbCurA}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"></path></svg><span>{{tx.mbA}}</span></a>
-  </nav>
   <sc-if value="{{mMenu}}" hint-placeholder-val="{{ false }}">
     <div class="m-menu m-only" role="dialog" aria-label="{{tx.mbMenu}}">
-      <div class="m-menu-h"><span class="m-menu-t">{{tx.mbMenu}}</span><button type="button" class="m-x" onClick="{{closeMenu}}" aria-label="{{tx.mbX}}">×</button></div>
+      <div class="m-menu-h">
+        <button type="button" class="m-x" onClick="{{closeMenu}}" aria-label="{{tx.mbX}}">×</button>
+        <span class="m-menu-t">{{tx.mbMenu}}</span>
+        <div class="m-lang"><button type="button" onClick="{{goFR}}" style="{{frStyle}}">FR</button><button type="button" onClick="{{goEN}}" style="{{enStyle}}">EN</button></div>
+      </div>
       <div class="m-sec">{{tx.mbB}}</div>
-      <sc-for list="{{brands}}" as="b" hint-placeholder-count="6">
-        <a class="m-row" href="{{b.href}}" aria-label="{{b.name}}"><img src="{{b.logo}}" alt="{{b.name}}"><span>→</span></a>
-      </sc-for>
+      <div class="m-brands">
+        <sc-for list="{{brands}}" as="b" hint-placeholder-count="6">
+          <a class="m-brand" href="{{b.href}}" aria-label="{{b.name}}"><img src="{{b.mlogo}}" alt="{{b.name}}"></a>
+        </sc-for>
+      </div>
       <div class="m-sec">{{tx.mbV}}</div>
       <div class="m-types">
         <sc-for list="{{types}}" as="t" hint-placeholder-count="8">
           <a class="m-type" href="{{t.href}}"><img src="{{t.img}}" alt="" loading="lazy">{{t.label}}</a>
         </sc-for>
       </div>
-      <div class="m-sec"> </div>
-      <a class="m-row" href="Contact.dc.html">{{tx.mbK}}<span>→</span></a>
-      <a class="m-row m-cta" href="Compte-Pro.dc.html">{{tx.mbO}}<span>→</span></a>
-      <div class="m-lang"><span style="color:#8A919B">{{tx.mbL}}</span><button type="button" onClick="{{goFR}}" style="{{frStyle}}">FR</button><button type="button" onClick="{{goEN}}" style="{{enStyle}}">EN</button></div>
+      <div class="m-links">
+        <a class="m-row" href="Contact.dc.html">{{tx.mbK}}<span>→</span></a>
+        <a class="m-row m-cta" href="Compte-Pro.dc.html">{{tx.mbO}}<span>→</span></a>
+      </div>
     </div>
   </sc-if>
 </div>
@@ -610,7 +692,7 @@ class Component extends DCLogic {
     return {
       tx, packLine: T('Prix visibles après connexion pro'), goFR: () => setLang('fr'), goEN: () => setLang('en'), frStyle: tgl(!en), enStyle: tgl(en),
       selOpen: () => this.setState({ menu: menu === 'selection' ? null : 'selection' }), selExpanded: String(menu === 'selection'), menuSelection: menu === 'selection', selItems, selCount, selLabel, selHeartFill: selCount > 0 ? '#FFFFFF' : 'rgba(255,255,255,0.5)', selHeartStroke: selCount > 0 ? '#FFFFFF' : '#8A9099', selBadgeStyle: 'position: absolute; top: 0; right: -2px; min-width: 16px; height: 16px; padding: 0 4px; box-sizing: border-box; border-radius: 8px; color: #FFFFFF; font-size: 10px; font-weight: 700; line-height: 16px; text-align: center; background: #D3201B', hasSel: selCount > 0, noSel: selCount === 0,
-      accent, packs: total, nav, brands: logos, types,
+      accent, packs: total, nav, brands: logos.map((l) => ({ ...l, mlogo: ({'REDSKINS':'./assets/m-redskins.svg','Maison Blaggio':'./assets/m-blaggio.svg','Paragoose':'./assets/m-paragoose.svg'})[l.name] || l.logo })), types,
       closeMenu: () => this.setState({ menu: null }),
       mOpen: () => this.setState({ menu: this.state.menu === "m" ? null : "m" }), mMenu: this.state.menu === "m", mBadge: selCount > 0 ? "position:absolute;top:3px;left:calc(50% + 4px);min-width:16px;height:16px;padding:0 4px;box-sizing:border-box;border-radius:8px;background:#E1251B;color:#fff;font:700 10px/16px Inter,sans-serif;text-align:center" : "display:none",
       nlForm: !this.state.nlDone, nlDone: !!this.state.nlDone, nlHint: this.state.nlErr ? T('Adresse e-mail invalide.') : T('Réservé aux professionnels · Désinscription en un clic.'),
