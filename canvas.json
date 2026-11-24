@@ -1,0 +1,128 @@
+{
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 4650,
+      "title": "Accueil",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    {
+      "file": "Marque-Kaporal.dc.html",
+      "x": 1520,
+      "y": 0,
+      "w": 1440,
+      "h": 3510,
+      "title": "Page marque Kaporal",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    {
+      "file": "Fiche-Produit.dc.html",
+      "x": 3040,
+      "y": 0,
+      "w": 1440,
+      "h": 2110,
+      "title": "Fiche produit",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    {
+      "file": "Marque-Redskins.dc.html",
+      "x": 4560,
+      "y": 0,
+      "w": 1440,
+      "h": 3300,
+      "title": "Page marque Redskins",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    {
+      "file": "Fiche-Redskins.dc.html",
+      "x": 6080,
+      "y": 0,
+      "w": 1440,
+      "h": 2200,
+      "title": "Fiche produit Redskins",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    {
+      "file": "Marque-Blaggio.dc.html",
+      "x": 7600,
+      "y": 0,
+      "w": 1440,
+      "h": 3300,
+      "title": "Page marque Maison Blaggio",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    {
+      "file": "Fiche-Blaggio.dc.html",
+      "x": 9120,
+      "y": 0,
+      "w": 1440,
+      "h": 2200,
+      "title": "Fiche produit Maison Blaggio",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    {
+      "file": "Compte-Pro.dc.html",
+      "x": 10640,
+      "y": 0,
+      "w": 1440,
+      "h": 1900,
+      "title": "Ouverture de compte pro",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    {
+      "file": "Contact.dc.html",
+      "x": 12160,
+      "y": 0,
+      "w": 1440,
+      "h": 1700,
+      "title": "Contact",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    {
+      "file": "Marque-Ellesse.dc.html",
+      "x": 13680,
+      "y": 0,
+      "w": 1440,
+      "h": 3300,
+      "title": "Page marque Ellesse",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    {
+      "file": "Mentions-Legales.dc.html",
+      "x": 15200,
+      "y": 0,
+      "w": 1440,
+      "h": 2900,
+      "title": "Mentions légales",
+      "expand": "fill",
+      "is_interactive": true
+    }
+  ],
+  "annotations": [
+    {
+      "id": "titre",
+      "x": 0,
+      "y": -300,
+      "w": 240,
+      "maxW": 8000,
+      "text": "Marque en Gros — le site (accueil, marque, fiche produit)",
+      "kind": "title1"
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  }
+}

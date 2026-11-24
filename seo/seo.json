@@ -1,0 +1,74 @@
+{
+ "Main": {
+  "url_fr": "/",
+  "url_en": "/en/",
+  "title_fr": "Grossiste vêtements homme de marque | Marque en Gros",
+  "title_en": "Men’s Branded Clothing Wholesaler | Marque en Gros",
+  "desc_fr": "Grossiste vêtements pour hommes : Kaporal, Redskins, Ellesse, Maison Blaggio. Sportswear, jeanswear, streetwear, doudounes en packs. Réservé aux pros.",
+  "desc_en": "Wholesale men’s clothing: Kaporal, Redskins, Ellesse, Maison Blaggio. Sportswear, jeanswear, streetwear and puffer jackets by the pack. Trade only."
+ },
+ "Marque-Kaporal": {
+  "url_fr": "/marques/kaporal",
+  "url_en": "/en/brands/kaporal",
+  "title_fr": "Grossiste Kaporal homme : doudounes | Marque en Gros",
+  "title_en": "Kaporal Wholesale for Men: Puffers | Marque en Gros",
+  "desc_fr": "Achetez Kaporal en gros : doudounes, blousons, gilets, polaires et t-shirts homme vendus par packs. Compte pro gratuit, prix après connexion.",
+  "desc_en": "Buy Kaporal wholesale: men’s puffer jackets, jackets, gilets, fleeces and T-shirts sold by the pack. Free trade account, prices after login."
+ },
+ "Marque-Redskins": {
+  "url_fr": "/marques/redskins",
+  "url_en": "/en/brands/redskins",
+  "title_fr": "Grossiste Redskins homme : vestes, parkas | Marque en Gros",
+  "title_en": "Redskins Wholesale for Men: Jackets & Parkas | Marque en Gros",
+  "desc_fr": "Redskins en gros pour revendeurs : vestes, parkas, doudounes et sportswear homme en packs. Livraison France et export, compte pro gratuit.",
+  "desc_en": "Redskins wholesale for retailers: men’s jackets, parkas, puffers and sportswear by the pack. Delivery in France and export, free trade account."
+ },
+ "Marque-Blaggio": {
+  "url_fr": "/marques/maison-blaggio",
+  "url_en": "/en/brands/maison-blaggio",
+  "title_fr": "Grossiste Maison Blaggio homme | Marque en Gros",
+  "title_en": "Maison Blaggio Wholesale for Men: Sportswear | Marque en Gros",
+  "desc_fr": "Maison Blaggio en gros : sportswear homme, polos, t-shirts et blousons vendus par packs aux professionnels. Livraison France et export.",
+  "desc_en": "Maison Blaggio wholesale: men’s sportswear, polos, T-shirts and jackets sold by the pack to trade customers. Delivery in France and export."
+ },
+ "Fiche-Produit": {
+  "url_fr": "/marques/kaporal/produit",
+  "url_en": "/en/brands/kaporal/product",
+  "title_fr": "Doudoune Kaporal homme en gros, pack | Marque en Gros",
+  "title_en": "Kaporal Men’s Puffer Jacket Wholesale, Pack | Marque en Gros",
+  "desc_fr": "Fiche produit Kaporal homme en gros : coloris, tailles, composition et pack. Prix grossiste visibles après connexion professionnelle.",
+  "desc_en": "Kaporal men’s wholesale product sheet: colours, sizes, composition and pack. Wholesale prices visible after trade login."
+ },
+ "Fiche-Redskins": {
+  "url_fr": "/marques/redskins/produit",
+  "url_en": "/en/brands/redskins/product",
+  "title_fr": "Veste Redskins homme en gros, pack | Marque en Gros",
+  "title_en": "Redskins Men’s Jacket Wholesale, Pack | Marque en Gros",
+  "desc_fr": "Fiche produit Redskins homme en gros : coloris, tailles, composition et pack. Prix grossiste visibles après connexion professionnelle.",
+  "desc_en": "Redskins men’s wholesale product sheet: colours, sizes, composition and pack. Wholesale prices visible after trade login."
+ },
+ "Fiche-Blaggio": {
+  "url_fr": "/marques/maison-blaggio/produit",
+  "url_en": "/en/brands/maison-blaggio/product",
+  "title_fr": "Maison Blaggio homme en gros, pack | Marque en Gros",
+  "title_en": "Maison Blaggio Men’s Wholesale, Pack | Marque en Gros",
+  "desc_fr": "Fiche produit Maison Blaggio homme en gros : coloris, tailles, composition et pack. Prix grossiste visibles après connexion professionnelle.",
+  "desc_en": "Maison Blaggio men’s wholesale product sheet: colours, sizes, composition and pack. Wholesale prices visible after trade login."
+ },
+ "Contact": {
+  "url_fr": "/contact",
+  "url_en": "/en/contact",
+  "title_fr": "Contact grossiste vêtements homme Paris | Marque en Gros",
+  "title_en": "Contact Men’s Clothing Wholesaler, Paris | Marque en Gros",
+  "desc_fr": "Contactez Marque en Gros, grossiste de vêtements homme de marque à Paris 16e (13 rue Spontini). Un commercial dédié vous rappelle.",
+  "desc_en": "Contact Marque en Gros, wholesaler of branded men’s clothing in Paris (13 rue Spontini). A dedicated sales rep will call you back."
+ },
+ "Compte-Pro": {
+  "url_fr": "/compte-pro",
+  "url_en": "/en/trade-account",
+  "title_fr": "Ouvrir un compte pro grossiste vêtements | Marque en Gros",
+  "title_en": "Open a Trade Account, Clothing Wholesale | Marque en Gros",
+  "desc_fr": "Ouvrez votre compte professionnel gratuit pour accéder aux prix grossiste Kaporal, Redskins, Maison Blaggio. Réservé aux revendeurs.",
+  "desc_en": "Open your free trade account to access Kaporal, Redskins and Maison Blaggio wholesale prices. Resellers only."
+ }
+}
