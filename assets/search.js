@@ -88,6 +88,7 @@
     '.mgs-e{padding:18px 16px;font:400 14px Inter,sans-serif;color:#545B66}',
     '.mgs-f{padding:10px 16px 12px;border-top:1px solid #ECEDEF;font:400 12px Inter,sans-serif;color:#6B727C}',
     /* mobile : la loupe d’origine ouvre une barre plein écran */
+    '.mgs-in::-webkit-search-cancel-button,.mgs-in::-webkit-search-decoration{-webkit-appearance:none;appearance:none;display:none}',
     '.mgs-m{display:none}',
     '@media (max-width:768px){',
     '.m-hdr>header.mgs-on{display:grid!important;gap:4px!important}',
