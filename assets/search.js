@@ -175,9 +175,15 @@
     document.addEventListener('keydown', function (e) {
       if ((e.key === '/' || (e.key === 'k' && (e.metaKey || e.ctrlKey))) && !/INPUT|TEXTAREA/.test((document.activeElement || {}).tagName)) { e.preventDefault(); form.classList.add('open'); inp.focus(); }
     });
-    // loupe d'origine (mobile) : ouvre la barre plein écran
-    var loupe = header.lastElementChild && header.lastElementChild.querySelector('button:first-child');
-    if (loupe) loupe.addEventListener('click', function () { form.classList.add('open'); inp.focus(); load(); });
+    // loupe d'origine (mobile) : délégation (le bouton peut être recréé par le rendu)
+    if (!window.__mgsLoupe) {
+      window.__mgsLoupe = true;
+      document.addEventListener('click', function (e) {
+        var b = e.target.closest && e.target.closest('.m-hdr > header > div:last-child > button:first-child');
+        if (!b || !form || innerWidth > 768) return;
+        e.preventDefault(); form.classList.add('open'); inp.focus(); load();
+      }, true);
+    }
     load();
   }
 
