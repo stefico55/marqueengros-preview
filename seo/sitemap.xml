@@ -84,4 +84,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://marqueengros.com/en/trade-account"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://marqueengros.com/compte-pro"/>
   </url>
+  <url>
+    <loc>https://marqueengros.com/marques/polo-team</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://marqueengros.com/marques/polo-team"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marqueengros.com/en/brands/polo-team"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marqueengros.com/marques/polo-team"/>
+  </url>
+  <url>
+    <loc>https://marqueengros.com/en/brands/polo-team</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://marqueengros.com/marques/polo-team"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marqueengros.com/en/brands/polo-team"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marqueengros.com/marques/polo-team"/>
+  </url>
 </urlset>
