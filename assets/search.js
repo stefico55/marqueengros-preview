@@ -185,6 +185,7 @@
     var header = document.querySelector('.m-hdr > header');
     if (!header) return;
     if (!st) { st = document.createElement('style'); st.textContent = CSS; document.head.appendChild(st); }
+    if (!header.classList.contains('mgs-on')) header.classList.add('mgs-on');
     if (!form || !header.contains(form)) {
       if (form && form.parentNode) form.parentNode.removeChild(form);
       var old = inp ? inp.value : '';
@@ -196,7 +197,7 @@
   function init() {
     ensure();
     var n = 0, t = setInterval(function () { ensure(); if (++n > 40) clearInterval(t); }, 250);
-    new MutationObserver(function () { var h = document.querySelector('.m-hdr > header'); if (h && (!form || !h.contains(form))) ensure(); }).observe(document.body, { childList: true, subtree: true });
+    new MutationObserver(function () { var h = document.querySelector('.m-hdr > header'); if (h && (!form || !h.contains(form) || !h.classList.contains('mgs-on'))) ensure(); }).observe(document.body, { childList: true, subtree: true });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
