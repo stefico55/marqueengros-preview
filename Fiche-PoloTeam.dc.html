@@ -434,8 +434,8 @@ aside[style*="position: sticky"]>div{padding:14px!important}
     <div class="meg-wrap" style="display: grid; grid-template-columns: minmax(0, 1fr) 440px; gap: 64px; align-items: start">
 
       <div style="display: flex; flex-direction: column; gap: 12px; min-width: 0">
-        <div class="m-fp-img" style="position: relative; aspect-ratio: 1 / 1; background: #FFFFFF; border: 1px solid #ECEDEF; overflow: hidden">
-          <img src="{{mainImg}}" alt="Redskins {{name}} {{colName}} · {{viewLabel}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block">
+        <div class="m-fp-img" onClick="{{nextView}}" style="cursor: pointer; position: relative; aspect-ratio: 1 / 1; background: #FFFFFF; border: 1px solid #ECEDEF; overflow: hidden">
+          <img src="{{mainImg}}" alt="Polo Team {{name}} {{colName}} · {{viewLabel}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block">
         </div>
         <div style="display: flex; gap: 8px; justify-content: center"><sc-for list="{{side}}" as="v" hint-placeholder-count="3">
           <button type="button" class="fp-th" onClick="{{v.pick}}" aria-label="Afficher : {{v.label}}" style="position: relative; flex: 0 0 72px; width: 72px; height: 72px; padding: 0; background: #FFFFFF; border: 1px solid {{v.bd}}; box-shadow: {{v.sh}}; cursor: pointer; overflow: hidden">
