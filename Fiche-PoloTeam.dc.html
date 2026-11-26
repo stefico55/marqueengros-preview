@@ -434,9 +434,13 @@ aside[style*="position: sticky"]>div{padding:14px!important}
     <div class="meg-wrap" style="display: grid; grid-template-columns: minmax(0, 1fr) 440px; gap: 64px; align-items: start">
 
       <div style="display: flex; flex-direction: column; gap: 12px; min-width: 0">
-        <div class="m-fp-img" onClick="{{nextView}}" style="cursor: pointer; position: relative; aspect-ratio: 1 / 1; background: #FFFFFF; border: 1px solid #ECEDEF; overflow: hidden">
-          <img src="{{mainImg}}" alt="Polo Team {{name}} {{colName}} · {{viewLabel}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block">
+        <div class="m-fp-img" onClick="{{nextView}}" onMouseMove="{{hoverMove}}" onMouseLeave="{{hoverOut}}" style="cursor: pointer; position: relative; aspect-ratio: 1 / 1; background: #FFFFFF; border: 0; overflow: hidden">
+          <img class="fp-main" src="{{mainImg}}" alt="Polo Team {{name}} {{colName}} · {{viewLabel}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block">
+          <button type="button" onClick="{{zoomOpen}}" aria-label="Agrandir la photo" style="position: absolute; right: 14px; bottom: 14px; width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(14,17,22,0.85); color: #FFFFFF; cursor: zoom-in; display: flex; align-items: center; justify-content: center; padding: 0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M20 20l-4.8-4.8M10.5 7.5v6M7.5 10.5h6"></path></svg></button>
         </div>
+        <sc-if value="{{zoomOn}}" hint-placeholder-val="{{ false }}">
+          <div onClick="{{zoomClose}}" role="dialog" aria-label="Photo agrandie" style="position: fixed; inset: 0; z-index: 400; background: rgba(14,17,22,0.94); display: flex; align-items: center; justify-content: center; cursor: zoom-out"><img src="{{mainImg}}" alt="{{viewLabel}}" style="max-width: 96vw; max-height: 94vh; object-fit: contain; display: block"><button type="button" onClick="{{zoomClose}}" aria-label="Fermer" style="position: absolute; top: 18px; right: 18px; width: 44px; height: 44px; border-radius: 50%; border: 0; background: #FFFFFF; color: #0E1116; font-size: 24px; line-height: 1; cursor: pointer">×</button><button type="button" onClick="{{zoomNext}}" aria-label="Vue suivante" style="position: absolute; right: 18px; top: 50%; width: 44px; height: 44px; margin-top: -22px; border-radius: 50%; border: 0; background: #FFFFFF; color: #0E1116; font-size: 22px; cursor: pointer">›</button><button type="button" onClick="{{zoomPrev}}" aria-label="Vue précédente" style="position: absolute; left: 18px; top: 50%; width: 44px; height: 44px; margin-top: -22px; border-radius: 50%; border: 0; background: #FFFFFF; color: #0E1116; font-size: 22px; cursor: pointer">‹</button></div>
+        </sc-if>
         <div style="display: flex; gap: 8px; justify-content: center"><sc-for list="{{side}}" as="v" hint-placeholder-count="3">
           <button type="button" class="fp-th" onClick="{{v.pick}}" aria-label="Afficher : {{v.label}}" style="position: relative; flex: 0 0 72px; width: 72px; height: 72px; padding: 0; background: #FFFFFF; border: 1px solid {{v.bd}}; box-shadow: {{v.sh}}; cursor: pointer; overflow: hidden">
             <img src="{{v.img}}" alt="{{v.label}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block">
@@ -669,7 +673,7 @@ class Component extends DCLogic {
     }));
     const views = [{ label: T('Porté · face'), img: cv.img }]; if (cv.imgB) views.push({ label: T('Porté · dos'), img: cv.imgB }); if (cv.imgC) views.push({ label: T('Détail · logo brodé'), img: cv.imgC });
     if (cv.img2) { views[0].label = 'Ensemble'; views.push({ label: T('Haut'), img: cv.imgH }, { label: 'Bas · 3/4', img: cv.img2 }); }
-    const side = views.length > 1 ? views.map((v, i) => ({ i, label: v.label, img: v.img, bd: '#ECEDEF', sh: 'none', pick: () => this.setState({ view: i }) })).filter((v) => v.i !== view % views.length && v.img) : [];
+    const side = views.length > 1 ? views.map((v, i) => ({ i, label: v.label, img: v.img, bd: 'transparent', sh: 'none', pick: () => this.setState({ view: i }) })).filter((v) => v.i !== view % views.length && v.img) : [];
     const sizes = ['S', 'M', 'L', 'XL', 'XXL'].map((z, n) => ({ size: z, qty: c.sz[n], style: 'display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 14px 0 16px;' + (n ? ' border-left: 1px solid #ECEDEF' : '') }));
     const defK = (x) => x.cols[(MODELS.indexOf(x) * 2 + 1) % x.cols.length].k;
     const dc = (x) => x.cols.find((cc) => cc.k === defK(x)) || x.cols[0];
@@ -698,6 +702,10 @@ class Component extends DCLogic {
       packTitle: (en ? 'Pack of ' + c.pcs + ' pieces' : 'Pack de ' + c.pcs + ' pièces'), boxText: c.box + (en ? ' · sizes S to XXL' : ' · tailles S à XXL'),
       colName: cv.n, code: c.code, ean: T('À renseigner'),
       swatches, side, sizes, others,
+      hoverMove: (e) => { try { if (!window.matchMedia('(hover: hover)').matches) return; const el = e.currentTarget, r = el.getBoundingClientRect(), im = el.querySelector('.fp-main'); im.style.transition = 'transform 0.12s ease-out'; im.style.transformOrigin = ((e.clientX - r.left) / r.width * 100) + '% ' + ((e.clientY - r.top) / r.height * 100) + '%'; im.style.transform = 'scale(2.4)'; } catch (x) {} },
+      hoverOut: (e) => { try { const im = e.currentTarget.querySelector('.fp-main'); im.style.transform = 'none'; } catch (x) {} },
+      zoomOn: !!this.state.zoom, zoomOpen: (e) => { try { e.stopPropagation(); } catch (x) {} this.setState({ zoom: true }); }, zoomClose: (e) => { try { e.stopPropagation(); } catch (x) {} this.setState({ zoom: false }); },
+      zoomNext: (e) => { try { e.stopPropagation(); } catch (x) {} this.setState({ view: (view + 1) % views.length }); }, zoomPrev: (e) => { try { e.stopPropagation(); } catch (x) {} this.setState({ view: (view + views.length - 1) % views.length }); },
       mainImg: views[view % views.length].img, viewLabel: views[view % views.length].label,
       prevView: () => this.setState({ view: (view + views.length - 1) % views.length }),
       nextView: () => this.setState({ view: (view + 1) % views.length }),
