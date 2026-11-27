@@ -285,7 +285,7 @@ div:has(>.m-chips){margin-bottom:14px!important;gap:0!important}
 /* Kaporal ambiance tile */
 span[style*="font-size: 34px"][style*="line-height: 0.95"]{font-size:clamp(14px,4.4vw,18px)!important;left:12px!important;right:10px!important;bottom:12px!important;overflow-wrap:anywhere}
 /* product sheet */
-.m-fp-img{aspect-ratio:4/5!important;margin-left:-16px;margin-right:-16px;border-left:0!important;border-right:0!important}
+.m-fp-img{aspect-ratio:3/4!important;margin-left:-16px;margin-right:-16px;border-left:0!important;border-right:0!important}
 .fp-th{flex:0 0 48px!important;width:48px!important;height:48px!important}
 button.kp-sw{width:22px!important;height:22px!important;min-width:0!important}
 [style*="gap: 10px"]:has(>button.kp-sw){gap:12px!important}
@@ -434,18 +434,18 @@ aside[style*="position: sticky"]>div{padding:14px!important}
     <div class="meg-wrap" style="display: grid; grid-template-columns: minmax(0, 1fr) 440px; gap: 64px; align-items: start">
 
       <div style="display: flex; flex-direction: column; gap: 12px; min-width: 0">
-        <div class="m-fp-img" onClick="{{nextView}}" onMouseMove="{{hoverMove}}" onMouseLeave="{{hoverOut}}" style="cursor: pointer; position: relative; aspect-ratio: 1 / 1; background: #FFFFFF; border: 0; overflow: hidden">
+        <div class="m-fp-img" style="position: relative; aspect-ratio: 3 / 4; background: #FFFFFF; border: 0; overflow: hidden">
           <img class="fp-main" src="{{mainImg}}" alt="Maison Blaggio {{name}} {{colName}} · {{viewLabel}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block">
           <button type="button" onClick="{{zoomOpen}}" aria-label="Agrandir la photo" style="position: absolute; right: 14px; bottom: 14px; width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(14,17,22,0.85); color: #FFFFFF; cursor: zoom-in; display: flex; align-items: center; justify-content: center; padding: 0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M20 20l-4.8-4.8M10.5 7.5v6M7.5 10.5h6"></path></svg></button>
+                <div style="position: absolute; top: 14px; left: 14px; z-index: 2; display: flex; flex-direction: column; gap: 8px"><sc-for list="{{side}}" as="v" hint-placeholder-count="3">
+          <button type="button" class="fp-th" onClick="{{v.pick}}" aria-label="Afficher : {{v.label}}" style="position: relative; flex: 0 0 64px; width: 64px; height: 64px; padding: 0; background: #FFFFFF; border: 1px solid {{v.bd}}; box-shadow: {{v.sh}}; cursor: pointer; overflow: hidden">
+            <img src="{{v.img}}" alt="{{v.label}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block">
+          </button>
+        </sc-for></div>
         </div>
         <sc-if value="{{zoomOn}}" hint-placeholder-val="{{ false }}">
           <div onClick="{{zoomClose}}" role="dialog" aria-label="Photo agrandie" style="position: fixed; inset: 0; z-index: 400; background: rgba(14,17,22,0.94); display: flex; align-items: center; justify-content: center; cursor: zoom-out"><img src="{{mainImg}}" alt="{{viewLabel}}" style="max-width: 96vw; max-height: 94vh; object-fit: contain; display: block"><button type="button" onClick="{{zoomClose}}" aria-label="Fermer" style="position: absolute; top: 18px; right: 18px; width: 44px; height: 44px; border-radius: 50%; border: 0; background: #FFFFFF; color: #0E1116; font-size: 24px; line-height: 1; cursor: pointer">×</button><button type="button" onClick="{{zoomNext}}" aria-label="Vue suivante" style="position: absolute; right: 18px; top: 50%; width: 44px; height: 44px; margin-top: -22px; border-radius: 50%; border: 0; background: #FFFFFF; color: #0E1116; font-size: 22px; cursor: pointer">›</button><button type="button" onClick="{{zoomPrev}}" aria-label="Vue précédente" style="position: absolute; left: 18px; top: 50%; width: 44px; height: 44px; margin-top: -22px; border-radius: 50%; border: 0; background: #FFFFFF; color: #0E1116; font-size: 22px; cursor: pointer">‹</button></div>
         </sc-if>
-        <div style="display: flex; gap: 8px; justify-content: center"><sc-for list="{{side}}" as="v" hint-placeholder-count="3">
-          <button type="button" class="fp-th" onClick="{{v.pick}}" aria-label="Afficher : {{v.label}}" style="position: relative; flex: 0 0 72px; width: 72px; height: 72px; padding: 0; background: #FFFFFF; border: 1px solid {{v.bd}}; box-shadow: {{v.sh}}; cursor: pointer; overflow: hidden">
-            <img src="{{v.img}}" alt="{{v.label}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block">
-          </button>
-        </sc-for></div>
       </div>
 
       <div style="display: flex; flex-direction: column; gap: 28px; padding-top: 4px">
